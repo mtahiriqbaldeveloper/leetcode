@@ -11,19 +11,14 @@ public class StockBuySellBestTime {
 
         for (int i = 1; i < prices.length; i++) {
 
-
-
             if(prices[i] < profit){
                 profit = prices[i];
             }
-
             currentProfit = prices[i]- profit;
             if(currentProfit > maxProfit){
                 maxProfit = currentProfit;
             }
         }
-
-        //7,1,5,3,6,4
 
         System.out.println(maxProfit);
     }
