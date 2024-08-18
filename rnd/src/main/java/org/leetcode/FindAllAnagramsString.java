@@ -37,7 +37,7 @@ public class FindAllAnagramsString {
             }
 
             // Shrink the window if its size is greater than p's length
-            while (rightPointer - leftPointer + 1 > p.length()) {
+            if (rightPointer - leftPointer + 1 > p.length()) {
                 char leftChar = s.charAt(leftPointer);
                 if (haveMap.containsKey(leftChar)) {
                     if (windowMap.get(leftChar).intValue() == haveMap.get(leftChar).intValue()) {
